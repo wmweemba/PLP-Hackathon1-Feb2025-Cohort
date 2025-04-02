@@ -1,6 +1,4 @@
-
-
-/******************************************************Main Web Page Stylink*****************************************************/
+/******************************************************Main Web Page Styling (wsm.html)*****************************************************/
 
 html#wsm {
     /*background-image: url('./assets/Will.jpg'); /* Adjust the path if necessary */
@@ -122,13 +120,13 @@ header#about-header {
 }
 
 
-/*********Layout of the main body of the about page*********/
+/**************************************Layout of the main body of the about page********************************************/
 
 /* About Section Layout */
 main {
     display: flex; /* Use flexbox for layout */
     flex-direction: row; /* Arrange items in a row */
-    align-items: flex-start; /* Align items at the top */
+    align-items: center; /* Align items at the top */
     gap: 20px; /* Add spacing between the columns */
     padding: 20px; /* Add padding around the main content */
 }
@@ -139,7 +137,7 @@ main {
     font-size: 2rem; /* Adjust font size */
     font-weight: bold;
     margin: 0; /* Remove default margin */
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Align text to the left */
 }
 
 /* Styling for the About Section content */
@@ -148,6 +146,7 @@ main {
     font-size: 1rem; /* Adjust font size */
     line-height: 1.6; /* Improve readability */
     text-align: justify; /* Justify the text */
+    margin: 0 auto;
 }
 
 /**************************************************************Contacts Page Styling**********************************************/
@@ -161,7 +160,56 @@ html#contacts {
     width: 100%; /* Ensure full width */
 }
 
-/* Main section layout for 3 columns using flexbox */
+#contact-header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the h1 and ul */
+    align-items: center; /* Align items vertically in the center */
+    padding: 10px 20px; /* Add some padding for spacing */
+    background-color: black; /* Optional: Set background color */
+    /*border-bottom: 1px solid #ccc; /* Optional: Add a bottom border */
+}
+
+/************Navigatioin Styling for Contacts Page***************/
+
+#contact-home {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+}
+
+#contact-home a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set text color */
+    transition: color 0.3s ease;
+}
+
+#contact-home a:hover {
+    color: gray; /* Optional: Change color on hover */
+}
+
+/* Navigation Menu Styling */
+#contact-nav ul {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 20px; /* Add spacing between menu items */
+}
+
+#contact-nav ul li a {
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem;
+    color: white; /* Set link color */
+    transition: color 0.3s ease;
+}
+
+#contact-nav ul li a:hover {
+    color: gray; /* Optional: Change color on hover */
+}
+
+/*****************************************************************/
+
+/* Main section layout for 3 columns using flexbox for contacts page*/
 #contacts {
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space out the columns */
@@ -188,22 +236,19 @@ html#contacts {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Center the icons */
-    gap: 15px; /* Add spacing between icons */
+    flex-direction: column; /* Arrange links vertically */
+    gap: 10px; /* Add spacing between links */
 }
 
-#contacts-social ul li {
-    display: inline-block;
+#contacts-social ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set link color to white */
+    font-size: 1rem; /* Adjust font size */
+    transition: color 0.3s ease; /* Add hover effect */
 }
 
-#contacts-social ul li a img {
-    width: 40px; /* Set the width of the icons */
-    height: 40px; /* Set the height of the icons */
-    transition: transform 0.3s ease; /* Add a hover effect */
-}
-
-#contacts-social ul li a img:hover {
-    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+#contacts-social ul li a:hover {
+    color: gray; /* Change color on hover */
 }
 
 /* Styling for the contact form */
@@ -231,7 +276,7 @@ html#contacts {
 
 .contact-form .form-group input,
 .contact-form .form-group textarea {
-    width: 100%; /* Full width inputs */
+    width: 50%; /* Reduce the width to 50% */
     padding: 10px;
     border: none; /* Remove default border */
     border-bottom: 1px solid white; /* Add a bottom border */
@@ -239,6 +284,7 @@ html#contacts {
     color: white; /* White text for inputs */
     font-size: 1rem;
     outline: none; /* Remove focus outline */
+    margin: 0 auto; /* Center the elements horizontally */
 }
 
 .contact-form .form-group input::placeholder,
@@ -248,6 +294,7 @@ html#contacts {
 }
 
 .contact-form button {
+    width: 30%; /* Reduce the button width to 50% */
     padding: 10px 20px;
     background-color: transparent; /* Transparent button background */
     color: white; /* White text */
@@ -256,9 +303,190 @@ html#contacts {
     cursor: pointer;
     font-size: 1rem;
     transition: all 0.3s ease;
+    margin: 0 auto; /* Center the button horizontally */
 }
 
 .contact-form button:hover {
     background-color: white; /* White background on hover */
     color: black; /* Black text on hover */
+}
+
+
+/*************************************************Styling for the Projects Page*************************************************/
+
+/* Add styles for the two-column layout */
+#projects {
+    display: flex;
+    gap: 20px;
+}
+
+.projects-sidebar {
+    flex: 1; /* 20% of the width */
+    max-width: 20%;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for the sidebar */
+    border-right: 1px solid #ccc; /* Add a border to separate the sidebar */
+}
+
+.projects-sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+.projects-content {
+    flex: 4; /* 80% of the width */
+    padding: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Slightly lift the card on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+
+/*******************************************************Styling for the Interests Page*****************************************/
+
+
+/* Add styles for the two-column layout */
+#interests {
+    display: flex;
+    gap: 20px;
+}
+
+.interests-sidebar {
+    flex: 1; /* 20% of the width */
+    max-width: 20%;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for the sidebar */
+    border-right: 1px solid #ccc; /* Add a border to separate the sidebar */
+}
+
+.interests-sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+.interests-content {
+    flex: 4; /* 80% of the width */
+    padding: 20px;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+    transform: translateY(-5px); /* Slightly lift the item on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.accordion-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.accordion-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/**********************************************Styling for the Professional Experience Page************************************/
+
+/* Add styles for the two-column layout */
+#professional {
+    display: flex;
+    gap: 20px;
+}
+
+.professional-sidebar {
+    flex: 1; /* 20% of the width */
+    max-width: 20%;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for the sidebar */
+    border-right: 1px solid #ccc; /* Add a border to separate the sidebar */
+}
+
+.professional-sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+.professional-content {
+    flex: 4; /* 80% of the width */
+    padding: 20px;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+}
+
+.accordion-label {
+    display: block;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-label:hover {
+    background-color: #e0e0e0;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    font-size: 1rem;
+    color: #555;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-top: none;
+    transition: max-height 0.3s ease;
+}
+
+input[type="radio"]:checked + .accordion-label + .accordion-content {
+    max-height: 200px; /* Adjust based on content height */
+    padding: 15px;
 }
