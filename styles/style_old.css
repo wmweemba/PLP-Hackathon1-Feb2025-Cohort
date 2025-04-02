@@ -1,0 +1,158 @@
+/* Filter Buttons Styling */
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter-buttons input {
+    display: none;
+}
+
+.filter-buttons label {
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+.filter-buttons input:checked + label {
+    background-color: #007BFF;
+    color: white;
+    border-color: #007BFF;
+}
+
+/* Projects Grid Styling */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: none; /* Hide all projects by default */
+}
+
+/* Show all projects when "All" is selected */
+#filter-all:checked ~ .projects-grid .project-card {
+    display: block;
+}
+
+/* Show only JavaScript projects */
+#filter-javascript:checked ~ .projects-grid .javascript {
+    display: block;
+}
+
+/* Show only Python projects */
+#filter-python:checked ~ .projects-grid .python {
+    display: block;
+}
+
+/* Show only React projects */
+#filter-react:checked ~ .projects-grid .react {
+    display: block;
+}
+
+
+/* Accordion Styling */
+.accordion {
+    margin-top: 20px;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion-label {
+    display: block;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.accordion-label:hover {
+    background-color: #0056b3;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.accordion input:checked + .accordion-label + .accordion-content {
+    display: block;
+}
+
+ /* Contact Section Styling */
+ #contacts {
+    margin-top: 40px;
+}
+
+.contact-form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info ul li a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+    text-decoration: underline;
+}
