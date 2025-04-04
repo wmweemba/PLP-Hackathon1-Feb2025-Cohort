@@ -44,7 +44,7 @@
 
                 <!-- Contact Form -->
                 <div id="contacts-form">
-                    <form action="#" method="post" class="contact-form">
+                    <form action="#" method="post" class="contact-form" onsubmit="document.getElementById('success-trigger').checked = true; return false;">
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" required placeholder="Enter your name">
@@ -59,6 +59,14 @@
                         </div>
                         <button type="submit" class="submit-button">Submit</button>
                     </form>
+
+                    <!-- Hidden checkbox to trigger the success message -->
+                    <input type="checkbox" id="success-trigger" style="display: none;">
+
+                    <!-- Success message -->
+                    <div class="success-message">
+                        Thank you for your message! I will get back to you soon.
+                    </div>
                 </div>
 
             </section>
