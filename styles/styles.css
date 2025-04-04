@@ -1,4 +1,4 @@
-/******************************************************Main Web Page Styling (wsm.html)*****************************************************/
+/******************************************************Main Web Page Styling (index.html)*****************************************************/
 
 html#wsm {
     /*background-image: url('./assets/Will.jpg'); /* Adjust the path if necessary */
@@ -9,7 +9,7 @@ html#wsm {
     width: 100%; /* Ensures it spans the full width */
 } 
 
-/* Styling for the wsm.html header */
+/* Styling for the index.html header */
 #wsm-header {
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@ html#wsm {
     color: black;
 }
 
-/* Styling for the wsm.html heading */
+/* Styling for the index.html heading */
 #wsm-header h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -29,7 +29,7 @@ html#wsm {
     margin-bottom: 10px;
 }
 
-/* Styling for the wsm.html navigation bar */
+/* Styling for the index.html navigation bar */
 #wsm-nav ul {
     list-style: none;
     padding: 0;
@@ -39,12 +39,12 @@ html#wsm {
     gap: 20px;
 }
 
-/* Styling the wsm.html menu items */
+/* Styling the index.html menu items */
 #wsm-nav ul li {
     display: inline;
 }
 
-/* Styling the wsm.html menu links */
+/* Styling the index.html menu links */
 #wsm-nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
@@ -53,7 +53,7 @@ html#wsm {
     transition: color 0.3s ease;
 }
 
-/* Hover effect for wsm.html menu links */
+/* Hover effect for index.html menu links */
 #wsm-nav ul li a:hover {
     color: plum;
 }

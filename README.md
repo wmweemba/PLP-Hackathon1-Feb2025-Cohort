@@ -16,10 +16,9 @@ The portfolio website serves as a personal platform to:
 - Showcase my programming skills and the technologies I am learning.
 - Provide a way for visitors to connect with me via social links and a contact form.
 
-The home page of the website is `wsm.html`, which introduces me and links to other sections of the site.
 
 ## Features
-### 1. **Home Page (`wsm.html`)**
+### 1. **Home Page (`index.html`)**
    - A welcoming page with a navigation bar linking to all sections of the website.
    - Features a full-page background image and a brief introduction.
 
