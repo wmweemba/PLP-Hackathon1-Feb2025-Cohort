@@ -58,6 +58,20 @@ html#wsm {
     color: plum;
 }
 
+/*********************Mobile adaptive styling**************/
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    #wsm-nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    #wsm-nav ul li {
+        margin: 10px 0; /* Add spacing between items */
+    }
+}
+
 footer {
     position: fixed; /* Fix the footer to the viewport */
     bottom: 10px; /* Position it 10px from the bottom */
@@ -121,6 +135,42 @@ header#about-header {
 }
 
 
+/* Hamburger menu button */
+#hamburger-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    #about-nav ul {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column;
+        background-color: #f4f4f4;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #about-nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    #hamburger-menu {
+        display: block; /* Show hamburger menu button */
+    }
+
+    #about-nav.active ul {
+        display: flex; /* Show navigation links when active */
+    }
+}
+
 /**************************************Layout of the main body of the about page********************************************/
 
 /* About Section Layout */
@@ -175,6 +225,13 @@ html#contacts {
     /*border-bottom: 1px solid #ccc; /* Optional: Add a bottom border */
 }
 
+#contact-header #hamburger-menu {
+    color: white; /* Set the color to white */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+    padding: 10px; /* Add padding for better clickability */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
 /************Navigatioin Styling for Contacts Page***************/
 
 #contact-home {
@@ -213,6 +270,92 @@ html#contacts {
     color: gray; /* Optional: Change color on hover */
 }
 
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    #contact-nav ul {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #contact-nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    #hamburger-menu {
+        display: block; /* Show hamburger menu button */
+    }
+
+    #contact-nav.active ul {
+        display: flex; /* Show navigation links when active */
+    }
+}
+
+
+/* More Responsive layout for the contacts page */
+@media (max-width: 1024px) {
+    /* Tablet view adjustments */
+    #contacts {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
+        gap: 30px; /* Add spacing between sections */
+    }
+
+    #contacts-image,
+    #contacts-social,
+    #contacts-form {
+        flex: 1; /* Take full width */
+        max-width: 100%; /* Ensure elements span full width */
+        text-align: center; /* Center-align content */
+    }
+
+    #contacts-form {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .contact-form .form-group input,
+    .contact-form .form-group textarea {
+        width: 90%; /* Increase input width for better usability */
+    }
+
+    .contact-form button {
+        width: 50%; /* Adjust button width */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile view adjustments */
+    #contacts {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
+        gap: 20px; /* Add spacing between sections */
+    }
+
+    #contacts-image img {
+        max-width: 80%; /* Reduce image size for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #contacts-social ul {
+        flex-direction: column; /* Stack social links vertically */
+        gap: 15px; /* Add spacing between links */
+    }
+
+    .contact-form .form-group input,
+    .contact-form .form-group textarea {
+        width: 100%; /* Full width for inputs */
+    }
+
+    .contact-form button {
+        width: 70%; /* Adjust button width */
+    }
+}
 /*****************************************************************/
 
 /* Main section layout for 3 columns using flexbox for contacts page*/
@@ -586,4 +729,90 @@ input[type="radio"]:checked + .accordion-label + .accordion-content {
 
 .education-content li strong {
     color: #007BFF; /* Highlight certification names */
+}
+
+
+/*********Adaptive design for the remaining elements on about, professional and interests web pages******/
+
+/* General Responsive Layout for All Pages */
+@media (max-width: 1024px) {
+    /* Tablet view adjustments */
+    main {
+        flex-direction: column; /* Stack main content vertically */
+        align-items: center; /* Center align items */
+        gap: 30px; /* Add spacing between sections */
+    }
+
+    .sidebar {
+        flex: 1; /* Take full width */
+        max-width: 100%; /* Ensure elements span full width */
+        text-align: center; /* Center-align content */
+    }
+
+    .content {
+        flex: 1; /* Take full width */
+        max-width: 100%; /* Ensure elements span full width */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .accordion {
+        gap: 15px; /* Reduce spacing between accordion items */
+    }
+
+    .accordion-label {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .accordion-content {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile view adjustments */
+    main {
+        flex-direction: column; /* Stack main content vertically */
+        align-items: center; /* Center align items */
+        gap: 20px; /* Add spacing between sections */
+    }
+
+    .sidebar {
+        display: none; /* Hide sidebars on mobile for simplicity */
+    }
+
+    .content {
+        flex: 1; /* Take full width */
+        max-width: 100%; /* Ensure elements span full width */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .accordion-label {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    .accordion-content {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+    }
+
+    .download-cv-btn {
+        width: 80%; /* Make the button span most of the screen */
+        margin: 0 auto; /* Center the button */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack project cards vertically */
+    }
+
+    .project-card {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .contact-form .form-group input,
+    .contact-form .form-group textarea {
+        width: 100%; /* Full width for inputs */
+    }
+
+    .contact-form button {
+        width: 70%; /* Adjust button width */
+    }
 }
